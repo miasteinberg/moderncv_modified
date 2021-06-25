@@ -15,7 +15,7 @@
 
 % moderncv themes
 \moderncvstyle{classic}
-\moderncvcolor{burgundy}
+\moderncvcolor{burgundy}                % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 % character encoding
 \usepackage[utf8]{inputenc}             % replace by the encoding you are using
 
@@ -33,6 +33,7 @@
 
 \usepackage{xpatch}
 % \xpatchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+% I wanted to remove the forced commas between entries so that I could use my own if/when necessary
 \xpatchcmd\cventry{,}{}{}{}             % removes the commas after the entry sections
 \xpatchcmd\cventry{,}{}{}{}             % and the next...
 \xpatchcmd\cventry{.}{}{}{}             % and the period
@@ -43,11 +44,9 @@
 \usepackage{enumitem}   % sets list and item spacing
 
 % --- Bibliography setup ---
-\usepackage[backend=bibtex,style=authoryear,sorting=ydnt]{biblatex} % chicago-authordate
-\addbibresource{pubs.bib}               % identify file for publications
+\usepackage[backend=bibtex,style=authoryear,sorting=ydnt]{biblatex}
+\addbibresource{pubs.bib}               % identify file with citation
 \setlength\bibitemsep{\baselineskip}    % adds a space between each entry
-
-%\usepackage{multibbl}                  % another bibliography option 
 
 %---------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -55,14 +54,16 @@
 
 \firstname{First}
 \familyname{Lastname}
-%\title{Resumé title (optional)}        % optional, remove the line if not wanted
+%\title{Resumé title (optional)}                     % optional, remove the line if not wanted
 %\address{12345 Some Road}{Anytown, MD, USA}         % optional, remove the line if not wanted
-\mobile{+1 (XXX) 123-4567}       % optional, remove the line if not wanted
-%\phone{phone (617 919 2202)}           % optional, remove the line if not wanted
-%\fax{fax (optional)}                   % optional, remove the line if not wanted
-\email{yourname@gmail.com}         % optional, remove the line if not wanted
-\homepage{www.linkedin.com/in/yourpage}     % optional, remove the line if not wanted
-%\extrainfo{additional information (optional)}      % optional, remove the line if not wanted
+\mobile{+1 (XXX) 123-4567}                           % optional, remove the line if not wanted
+%\phone{phone (617 919 2202)}                        % optional, remove the line if not wanted
+%\fax{fax (optional)}                                % optional, remove the line if not wanted
+\email{yourname@gmail.com}                           % optional, remove the line if not wanted
+\homepage{www.linkedin.com/in/yourpage}              % optional, remove the line if not wanted
+%\social[github]{jdoe}                               % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information (optional)}       % optional, remove the line if not wanted
 
 %\makeatletter
 %\makeatother
@@ -94,7 +95,7 @@
 
 \section{Current Position}
 
-%--- Manager ---
+%--- Current ---
 \cventry{2018 --\newline{}present}{Job Title, Your Department \newline{}}{Your Company, }{Town, MD}{}{
 \begin{itemize}[itemsep=-1pt]
   \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -238,4 +239,3 @@
 
 
 \end{document}
-
