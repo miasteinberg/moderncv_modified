@@ -1,0 +1,241 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% Modified by Mia Steinberg (https://github.com/miasteinberg/moderncv_modified)
+
+%---------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%---------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{burgundy}
+% character encoding
+\usepackage[utf8]{inputenc}             % replace by the encoding you are using
+
+% Change your font if desired
+\usepackage{biolinum}
+
+%\usepackage[pdftex]{hyperref}
+%\usepackage{verbatim}
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\geometry{margin=0.85in}
+\setlength{\hintscolumnwidth}{1.5cm}	% change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}     % required when changes are made to page layout lengths
+
+\usepackage{xpatch}
+% \xpatchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\xpatchcmd\cventry{,}{}{}{}             % removes the commas after the entry sections
+\xpatchcmd\cventry{,}{}{}{}             % and the next...
+\xpatchcmd\cventry{.}{}{}{}             % and the period
+\xpatchcmd{\cvitem}{\raggedleft\hintstyle{#2}}{\raggedright\hintstyle{#2}}{}{} % left align the date
+
+\renewcommand*{\namefont}{\fontsize{32}{40}\mdseries\upshape}  % change name font size
+
+\usepackage{enumitem}   % sets list and item spacing
+
+% --- Bibliography setup ---
+\usepackage[backend=bibtex,style=authoryear,sorting=ydnt]{biblatex} % chicago-authordate
+\addbibresource{pubs.bib}               % identify file for publications
+\setlength\bibitemsep{\baselineskip}    % adds a space between each entry
+
+%\usepackage{multibbl}                  % another bibliography option 
+
+%---------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%---------------------------------------------------------------------------------------
+
+\firstname{First}
+\familyname{Lastname}
+%\title{Resumé title (optional)}        % optional, remove the line if not wanted
+%\address{12345 Some Road}{Anytown, MD, USA}         % optional, remove the line if not wanted
+\mobile{+1 (XXX) 123-4567}       % optional, remove the line if not wanted
+%\phone{phone (617 919 2202)}           % optional, remove the line if not wanted
+%\fax{fax (optional)}                   % optional, remove the line if not wanted
+\email{yourname@gmail.com}         % optional, remove the line if not wanted
+\homepage{www.linkedin.com/in/yourpage}     % optional, remove the line if not wanted
+%\extrainfo{additional information (optional)}      % optional, remove the line if not wanted
+
+%\makeatletter
+%\makeatother
+
+%\nopagenumbers{}       % uncomment to suppress automatic page numbering for CVs longer than one page
+
+%----------------------------------------------------------------------------------
+%   BEGIN CONTENT
+%----------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+\vspace*{-5mm}          % reduce the white space after the header
+
+%---------------------------------------------------------------------------------------
+%	OVERVIEW
+%---------------------------------------------------------------------------------------
+
+\section{Overview}
+
+\cventry{}{}{}{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}{}{
+}
+
+
+
+%---------------------------------------------------------------------------------------
+%	CURRENT POSITION
+%---------------------------------------------------------------------------------------
+
+\section{Current Position}
+
+%--- Manager ---
+\cventry{2018 --\newline{}present}{Job Title, Your Department \newline{}}{Your Company, }{Town, MD}{}{
+\begin{itemize}[itemsep=-1pt]
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{itemize}%
+}
+
+
+%---------------------------------------------------------------------------------------
+%	PREVIOUS EXPERIENCE
+%---------------------------------------------------------------------------------------
+
+\vspace{1mm}
+\section{Previous Experience}
+
+%--- Job 1 ---
+\cventry{2016 --\newline{}2018}{Job Title}{\newline{}Your Department, Your Division \newline{}Your Organization,}{City, MD}{}{
+\begin{itemize}[itemsep=-1pt]%
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Example projects include:
+    \begin{itemize}[itemsep=-3pt, topsep=-2pt]
+        \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    \end{itemize}
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Example projects include:
+    \begin{itemize}[itemsep=-3pt, topsep=-2pt]
+        \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    \end{itemize}
+  \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+\end{itemize}
+}
+
+\newpage
+
+
+%--- Job 2 ---
+\cventry{2015 --\newline{}2016}{Assistant Job Title}{\newline{}Your Office, Your Division\newline{}Your Company,}{Town, MD}{}{%
+\begin{itemize}[itemsep=-1pt]%
+  \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\newline{}
+\end{itemize}%
+}
+
+
+%--- Job 3 ---
+\cventry{2011 --\newline{}2015}{Junior Assistant Job Title}{\newline{}Your Office, Your Division\newline{}Your Company,}{Town, MD}{}{%
+\begin{itemize}[itemsep=-1pt]%
+  \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\newline{}
+\end{itemize}%
+}
+
+%--- Job 4 ---
+\cventry{2008 --\newline{}2011}{Postdoc Job Title}{\newline{}Your Office, Your Division\newline{}Your Company,}{Town, MD}{}{%
+\begin{itemize}[itemsep=-1pt]%
+  \item Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\newline{}
+\end{itemize}%
+}
+
+%---------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%---------------------------------------------------------------------------------------
+
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+% arguments 3 to 6 can be left empty
+\vspace{1mm}
+\section{Education}
+\cventry{2015}{Degree}{Subject}{}{Some University}{}
+\cventry{2008}{Degree}{Subject}{}{University, College}{}
+\cventry{2002}{Degree}{Subject}{}{Some College}{}
+
+%---------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%---------------------------------------------------------------------------------------
+
+\vspace{6mm}
+\section{Technical Skills}
+\cventry{}{Skillset:}{}{example1, example2, example3}{}{}
+\cventry{}{Another skillset:}{}{example1, example2, example3}{}{}
+\cventry{}{Another skillset:}{}{example1, example2, example3}{}{}
+\cventry{}{A list of skills:}{}{}{}{
+\begin{itemize}[itemsep=-1pt]%
+  \item Topic: example1, example2, example3, example1, example2, example3
+  \item Topic: example1, example2, example3, example1, example2, example3
+  \item Topic: example1, example2, example3, example1, example2, example3
+  \item Topic: example1, example2, example3, example1, example2, example3
+  \item Topic: example1, example2, example3, example1, example2, example3
+  \item Topic: example1, example2, example3, \LaTeX{}
+\end{itemize}
+}
+
+\newpage
+
+%---------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+%---------------------------------------------------------------------------------------
+
+\vspace{4mm}
+\nocite{*}
+\printbibliography[title={Recent Publications}]
+
+\cventry{}{}{For full publication list, please visit  \href{somelink.com}{somelink.com}}{}{}{}
+
+%---------------------------------------------------------------------------------------
+%	REFERENCES SECTION
+%---------------------------------------------------------------------------------------
+
+\vspace*{3mm}
+\section{References}
+%\begin{cvcolumns}
+\cventry{}{}{}{Current Supervisor}{}{
+  \begin{itemize}[itemsep=-1pt]
+      \item Director of Things
+      \item email: email@gmail.com
+      \item phone: (555) 123-4567 \newline{}
+  \end{itemize}
+}
+\cventry{}{}{}{Old Supervisor}{}{
+  \begin{itemize}[itemsep=-1pt]
+      \item Director of Stuff
+      \item email: email@gmail.com
+      \item phone: (555) 123-4567
+  \end{itemize}
+  }
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+
+\end{document}
+
